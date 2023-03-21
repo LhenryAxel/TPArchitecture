@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMI", "HMI\HMI.csproj", "{D3598064-3198-4CE6-907F-B896AACAB0B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HMI", "HMI\HMI.csproj", "{D3598064-3198-4CE6-907F-B896AACAB0B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "metier", "metier\metier.csproj", "{8B4AF4A6-FF8E-47B1-872E-530233F95C99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "metier\Logic.csproj", "{8B4AF4A6-FF8E-47B1-872E-530233F95C99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{D1819F67-EBCB-4FCE-89EE-0AB61FEC423B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject", "TestProject\TestProject.csproj", "{D1819F67-EBCB-4FCE-89EE-0AB61FEC423B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stockage", "Stockage\Stockage.csproj", "{6F757F5D-7927-470A-9FE0-2019987FDEBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stockage", "Stockage\Stockage.csproj", "{6F757F5D-7927-470A-9FE0-2019987FDEBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
