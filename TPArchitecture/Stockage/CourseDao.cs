@@ -88,7 +88,11 @@ namespace Storage
         /// <param name="t"></param>
         public void Update(Course t)
         {
-
+            connection.Open();
+            var command = connection.CreateCommand();
+            command.CommandText = "UPDATE Course SET Name='" + t.Name + "', Weight = " + t.Weight.ToString() + " WHERE Code='" + t.Code + "';";
+            command.ExecuteNonQuery();
+            connection.Close();
         }
 
         /// <summary>
