@@ -24,6 +24,40 @@ namespace Storage
             connection = new SQLiteConnection(@"DataSource=" + fileName);
         }
 
+        /// <summary>
+        /// Reader
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <returns></returns>
+        private Course Reader2Course(SQLiteDataReader reader)
+        {
+            Course prof = new Course(this, true);
+            prof.Code = reader["Code"].ToString();
+            prof.Name = reader["Name"].ToString();
+            prof.Weight = Convert.ToString(reader["Weight"]);
+            return prof;
+        }
+
+        /// <summary>
+        /// Recupere toutes les courses
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Course> GetAll()
+        {
+            connection.Open();
+            List<Course> courses = new List<Course>();
+            var command = connection.CreateCommand();
+            command.CommandText = "SELECT * FROM Course";
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    courses.Add(Reader2Course(reader));
+                }
+            }
+            connection.Close();
+            return courses;
+        }
 
         /// <summary>
         /// Méthode create
@@ -31,7 +65,11 @@ namespace Storage
         /// <param name="course"></param>
         public void Create(Course course)
         {
-
+            connection.Open();
+            var command = connection.CreateCommand();
+            command.CommandText = "INSERT INTO Course(Code,Name,Weight) VALUES('" + course.Code + "','" + course.Name + "'," + course.Weight.ToString() + ");";
+            command.ExecuteNonQuery();
+            connection.Close();
         }
 
         /// <summary>
@@ -59,7 +97,11 @@ namespace Storage
         /// <param name="t"></param>
         public void Delete(Course t)
         {
-
+            connection.Open();
+            var command = connection.CreateCommand();
+            command.CommandText = "DELETE FROM Course WHERE Code='" + t.Code + "';";
+            command.ExecuteNonQuery();
+            connection.Close();
         }
     }
 }

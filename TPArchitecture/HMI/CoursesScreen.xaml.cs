@@ -39,6 +39,7 @@ namespace HMI
         /// </summary>
         private void DrawCourses()
         {
+
         }
 
         /// <summary>
@@ -48,6 +49,11 @@ namespace HMI
         /// <param name="e"></param>
         private void RemoveCourse(object sender, RoutedEventArgs e)
         {
+            if (coursesList.SelectedItem != null)
+            {
+                this.notebook.RemoveCourse((Course)coursesList.SelectedItem);
+            }
+            coursesList.Items.Remove(coursesList.SelectedItem);
         }
 
         /// <summary>
@@ -57,7 +63,30 @@ namespace HMI
         /// <param name="e"></param>
         private void Add(object sender, RoutedEventArgs e)
         {
+            Course course = new Course(new CourseDao("C://Users//tauth//Desktop//TP-Architecture-logicielles//TP Architecture/BDD.db"), false);
+            course = this.notebook.AddCourse(course);
+            EditCourse courseScreen = new EditCourse(course);
+            courseScreen.Show();
+            this.Close();
         }
+
+
+        /// <summary>
+        /// Modifier un Cour
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ModifyCourse(object sender, RoutedEventArgs e)
+        {
+            if (coursesList.SelectedItem != null)
+            {
+                Course courseSelected = (Course)coursesList.SelectedItem;
+                EditCourse courseScreen = new EditCourse(courseSelected);
+                courseScreen.Show();
+            }
+        }
+
+
 
     }
 }

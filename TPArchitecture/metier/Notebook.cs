@@ -14,8 +14,9 @@ namespace Logic
     {
         private ICourseDao dao;
 
+
         /// <summary>
-        /// constructeur de la classe NoteBook
+        /// constructeur de la Classe
         /// </summary>
         /// <param name="dao"></param>
         public Notebook(ICourseDao dao)
@@ -23,5 +24,33 @@ namespace Logic
             this.dao = dao;
         }
 
+        /// <summary>
+        /// permet de suprimmer un cour
+        /// </summary>
+        /// <param name="t"></param>
+        public void RemoveCourse(Course t)
+        {
+            this.dao.Delete(t);
+        }
+
+        /// <summary>
+        /// permet d'ajouter un cour 
+        /// </summary>
+        /// <param name="course"></param>
+        /// <returns></returns>
+        public Course AddCourse(Course course)
+        {
+            this.dao.Create(course);
+            return course;
+        }
+
+        /// <summary>
+        /// permet d'update un cour
+        /// </summary>
+        /// <param name="course"></param>
+        public void UpdateCourse(Course course)
+        {
+            this.dao.Update(course);
+        }
     }
 }
