@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Logic;
+using Storage;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,17 @@ namespace HMI
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Notebook notebook;
+        private CourseDao courseDao;
+
+        /// <summary>
+        /// Constructeur de la fenetre
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
+            courseDao = new CourseDao("C:/Users/al425221/source/repos/TPArchitecture/BDD.db");
+            notebook = new Notebook(courseDao);
         }
     }
 }
