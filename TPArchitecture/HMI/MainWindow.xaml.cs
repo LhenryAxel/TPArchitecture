@@ -34,5 +34,17 @@ namespace HMI
             courseDao = new CourseDao("C:/Users/al425221/source/repos/TPArchitecture/BDD.db");
             notebook = new Notebook(courseDao);
         }
+
+        /// <summary>
+        /// Ouvre la fenetre CoursesScreen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Course(object sender, RoutedEventArgs e)
+        {
+            CoursesScreen coursesScreen = new CoursesScreen(this.notebook);
+            coursesScreen.Show();
+            this.Close();
+        }
     }
 }

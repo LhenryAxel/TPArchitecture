@@ -41,7 +41,7 @@ namespace Storage
         /// <returns></returns>
         public Course Read(string code)
         {
-
+            return null;
         }
 
         /// <summary>
