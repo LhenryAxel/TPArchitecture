@@ -110,21 +110,21 @@ namespace Logic
             }
         }
 
-        /// <summary>
-        /// Calcul de la moyenne
-        /// </summary>
-        /// <param name="exams"></param>
-        /// <returns></returns>
-        //public double Calculate(Exam[] exams)
-        //{
-        //    double sum = 0;
-        //    int count = 0;
-        //    foreach (Exam exam in exams)
-        //    {
-        //        count = count + exam.Coef;
-        //        sum = sum + exam.Score * exam.Coef;
-        //    }
-        //    return sum / count;
-        //}
+        // <summary>
+        // Calcul de la moyenne
+        // </summary>
+        // <param name = "exams" ></ param >
+        // < returns ></ returns >
+        public double Calculate(Exam[] exams)
+        {
+            double sum = 0;
+            int count = 0;
+            foreach (Exam exam in exams)
+            {
+                count = count + exam.Coef;
+                sum = sum + exam.Score * exam.Coef;
+            }
+            return sum / count;
+        }
     }
 }

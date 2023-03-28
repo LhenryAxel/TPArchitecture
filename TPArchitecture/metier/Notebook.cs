@@ -12,16 +12,17 @@ namespace Logic
     /// </summary>
     public class Notebook
     {
-        private ICourseDao dao;
+        private ICourseDao coursedao;
         private IExamDao examDao;
 
         /// <summary>
         /// constructeur de la Classe
         /// </summary>
         /// <param name="dao"></param>
-        public Notebook(ICourseDao dao)
+        public Notebook(ICourseDao course, IExamDao exam)
         {
-            this.dao = dao;
+            this.coursedao = course;
+            this.examDao = exam;
         }
 
         /// <summary>
@@ -30,7 +31,7 @@ namespace Logic
         /// <param name="t"></param>
         public void RemoveCourse(Course t)
         {
-            this.dao.Delete(t);
+            this.coursedao.Delete(t);
         }
 
         /// <summary>
@@ -40,7 +41,7 @@ namespace Logic
         /// <returns></returns>
         public Course AddCourse(Course course)
         {
-            this.dao.Create(course);
+            this.coursedao.Create(course);
             return course;
         }
 
@@ -50,7 +51,7 @@ namespace Logic
         /// <param name="course"></param>
         public void UpdateCourse(Course course)
         {
-            this.dao.Update(course);
+            this.coursedao.Update(course);
         }
 
         /// <summary>
@@ -59,7 +60,7 @@ namespace Logic
         /// <returns></returns>
         public Course[] ListAll()
         {
-            return this.dao.ListAll();
+            return this.coursedao.ListAll();
         }
 
         /// <summary>
@@ -87,7 +88,7 @@ namespace Logic
         public double Calculate()
         {
             Exam[] exams = this.examDao.ListAll();
-            Course[] courses = this.dao.ListAll();
+            Course[] courses = this.coursedao.ListAll();
             Calculator calculator = new Calculator(courses, exams);
             return calculator.Average;
         }

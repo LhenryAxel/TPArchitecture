@@ -24,6 +24,7 @@ namespace HMI
     {
         private Notebook notebook;
         private CourseDao courseDao;
+        private ExamDao examDao;
 
         /// <summary>
         /// Constructeur de la fenetre
@@ -32,7 +33,8 @@ namespace HMI
         {
             InitializeComponent();
             courseDao = new CourseDao("C:/Users/al425221/source/repos/TPArchitecture/BDD.db");
-            notebook = new Notebook(courseDao);
+            examDao = new ExamDao("C:/ Users / al425221 / source / repos / TPArchitecture / BDD.db");
+            notebook = new Notebook(courseDao, examDao);
         }
 
         /// <summary>
