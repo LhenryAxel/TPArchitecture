@@ -48,5 +48,28 @@ namespace HMI
             coursesScreen.Show();
             this.Close();
         }
+
+        /// <summary>
+        /// ouvre le ExamsScreen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OpenExamsScreen(object sender, RoutedEventArgs e)
+        {
+            ExamsScreen screen = new ExamsScreen(this.notebook);
+            screen.Show();
+            this.Close();
+        }
+
+        /// <summary>
+        /// Permet d'appeler la méthode Calculate de notebook
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Calculate(object sender, RoutedEventArgs e)
+        {
+            double average = notebook.Calculate();
+            MessageBox.Show(average.ToString());
+        }
     }
 }
