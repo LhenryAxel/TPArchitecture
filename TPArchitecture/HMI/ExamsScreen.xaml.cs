@@ -60,13 +60,14 @@ namespace HMI
         }
 
         /// <summary>
-        /// Update les infos
+        /// Update les infos d'un exam
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void UpdateInfo(object sender, EventArgs e)
         {
             examsList.Items.Clear();
+            notebook.UpdateExam(((EditExam)sender).exam);
             this.DrawExams();
         }
     }

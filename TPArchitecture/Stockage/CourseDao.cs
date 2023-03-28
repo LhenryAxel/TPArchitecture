@@ -79,7 +79,10 @@ namespace Storage
         /// <returns></returns>
         public Course Read(string code)
         {
-            return null;
+            connection.Open();
+            var command = connection.CreateCommand();
+            command.CommandText = code;
+            return Reader2Course(command.ExecuteReader());
         }
 
         /// <summary>

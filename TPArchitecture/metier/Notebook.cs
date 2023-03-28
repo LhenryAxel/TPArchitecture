@@ -55,6 +55,16 @@ namespace Logic
         }
 
         /// <summary>
+        /// permet d'update un exam
+        /// </summary>
+        /// <param name="course"></param>
+        public void UpdateExam(Exam exam)
+        {
+            this.examDao.Update(exam);
+        }
+
+
+        /// <summary>
         /// permet de lister les cours
         /// </summary>
         /// <returns></returns>

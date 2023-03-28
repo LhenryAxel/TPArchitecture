@@ -87,6 +87,7 @@ namespace HMI
                 Course courseSelected = (Course)coursesList.SelectedItem;
                 EditCourse courseScreen = new EditCourse(courseSelected);
                 courseScreen.Show();
+                courseScreen.Closed += UpdateInfo;
             }
         }
 

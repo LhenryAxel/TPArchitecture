@@ -56,6 +56,19 @@ namespace Storage
         }
 
         /// <summary>
+        /// Méthode update 
+        /// </summary>
+        /// <param name="t"></param>
+        public void Update(Exam t)
+        {
+            connection.Open();
+            var command = connection.CreateCommand();
+            command.CommandText = "UPDATE Exam SET Score='" + t.Score + "', Teacher = " + t.Teacher.ToString() + "', DateExam = " + t.DateExam + "', Coef = " + t.Coef + " WHERE CourseCode='" + t.Course + "';";
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        /// <summary>
         /// reader de Exam
         /// </summary>
         /// <param name="reader"></param>

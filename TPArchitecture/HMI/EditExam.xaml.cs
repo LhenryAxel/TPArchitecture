@@ -20,6 +20,7 @@ namespace HMI
     /// </summary>
     public partial class EditExam : Window
     {
+        public Exam exam;
         private Notebook notebook;
         public EditExam(Notebook notebook)
         {
@@ -29,6 +30,7 @@ namespace HMI
             {
                 listCourse.Items.Add(course);
             }
+            
         }
 
         /// <summary>

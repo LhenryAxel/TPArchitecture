@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Content="Course" HorizontalAlignment="Left" Margin="335,343,0,0" VerticalAlignment="Top" Height="37" Width="93" Click="Course" RenderTransformOrigin="0.62,0.704"/>
-        <Button Content="Exam" HorizontalAlignment="Left" Margin="461,343,0,0" VerticalAlignment="Top" Height="37" Width="93" RenderTransformOrigin="0.62,0.704" Click="OpenExamsScreen"/>
+        <Button Content="Exam" HorizontalAlignment="Left" Margin="478,343,0,0" VerticalAlignment="Top" Height="37" Width="93" RenderTransformOrigin="0.62,0.704" Click="OpenExamsScreen"/>
         <Button Content="Calculate" HorizontalAlignment="Left" Margin="191,343,0,0" VerticalAlignment="Top" Height="37" Width="93"  RenderTransformOrigin="0.62,0.704" Click="Calculate"/>
     </Grid>
 </Window>

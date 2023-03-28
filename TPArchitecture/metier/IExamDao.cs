@@ -12,5 +12,11 @@
         /// </summary>
         /// <returns></returns>
         Exam[] ListAll();
+
+        /// <summary>
+        /// interface Update
+        /// </summary>
+        /// <param name="t"></param>
+        void Update(Exam t);
     }
 }
