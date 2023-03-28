@@ -36,5 +36,11 @@ namespace Logic
         /// <param name="t"></param>
         void Delete(Course t);
 
+        /// <summary>
+        /// interface ListAll
+        /// </summary>
+        /// <returns></returns>
+        Course[] ListAll();
+
     }
 }

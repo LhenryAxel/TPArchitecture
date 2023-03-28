@@ -39,7 +39,11 @@ namespace HMI
         /// </summary>
         private void DrawCourses()
         {
-
+            Course[] courses = this.notebook.ListAll();
+            foreach (Course course in courses)
+            {
+                coursesList.Items.Add(course);
+            }
         }
 
         /// <summary>
@@ -63,7 +67,7 @@ namespace HMI
         /// <param name="e"></param>
         private void Add(object sender, RoutedEventArgs e)
         {
-            Course course = new Course(new CourseDao("C://Users//tauth//Desktop//TP-Architecture-logicielles//TP Architecture/BDD.db"), false);
+            Course course = new Course(new CourseDao("C:/Users/al425221/source/repos/TPArchitecture/BDD.db"), false);
             course = this.notebook.AddCourse(course);
             EditCourse courseScreen = new EditCourse(course);
             courseScreen.Show();
@@ -86,7 +90,17 @@ namespace HMI
             }
         }
 
-
+        /// <summary>
+        /// Update les infos d'un cour
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void UpdateInfo(object sender, EventArgs e)
+        {
+            coursesList.Items.Clear();
+            notebook.UpdateCourse(((EditCourse)sender).course);
+            this.DrawCourses();
+        }
 
     }
 }
