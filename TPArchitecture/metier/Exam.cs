@@ -12,6 +12,8 @@ namespace Logic
     public class Exam
     {
 		private float score;
+		private bool exist;
+		private IExamDao examDao;
 
 		/// <summary>
 		/// avoir le score
@@ -82,10 +84,25 @@ namespace Logic
 		}
 
 		/// <summary>
+		/// Si existe deja alors on appelle update, sinon on la créée
+		/// </summary>
+		public void Update()
+		{
+			if (exist)
+			{
+				this.examDao.Update(this);
+			}
+			else
+			{
+				this.examDao.Create(this);
+			}
+		}
+
+		/// <summary>
 		/// ToString pour l'affichage 
 		/// </summary>
 		/// <returns></returns>
-        public override string ToString()
+		public override string ToString()
         {
 			return String.Format("({0}) {1} - {2} | {3}", coef.ToString(), score.ToString(), teacher, dateExam.ToString());
         }

@@ -22,6 +22,7 @@ namespace HMI
     {
         public Exam exam;
         private Notebook notebook;
+
         public EditExam(Notebook notebook)
         {
             InitializeComponent();
@@ -40,6 +41,16 @@ namespace HMI
         /// <param name="e"></param>
         private void OnClose(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
+
+        /// <summary>
+        /// Bouton Ok
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Ok(object sender, RoutedEventArgs e)
+        {
             if (listCourse.SelectedItem != null)
             {
                 Exam exam = new Exam((Course)listCourse.SelectedItem);
@@ -49,23 +60,8 @@ namespace HMI
                 exam.DateExam = (DateTime)dateBox.SelectedDate;
                 this.notebook.CreateExam(exam);
                 this.Close();
+                exam.Update();
             }
         }
-
-        /// <summary>
-        /// Bouton Ok
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        //private void Ok(object sender, RoutedEventArgs e)
-        //{
-        //    exam.Teacher = this.Tea.Text;
-        //    exam.Coef = this.Name.Text;
-        //    exam.DateExam = 
-        //    exam.Course =
-        //    exam.Score 
-        //    course.Weight = this.Weight.Text;
-        //    this.Close();
-        //}
     }
 }

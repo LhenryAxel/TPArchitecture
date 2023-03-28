@@ -56,6 +56,7 @@ namespace HMI
             course.Name = this.Name.Text;
             course.Weight = this.Weight.Text;
             this.Close();
+            course.Update();
         }
     }
 }
