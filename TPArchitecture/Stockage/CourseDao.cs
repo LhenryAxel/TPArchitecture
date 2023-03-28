@@ -107,5 +107,27 @@ namespace Storage
             command.ExecuteNonQuery();
             connection.Close();
         }
+
+
+        /// <summary>
+        /// Liste les cours 
+        /// </summary>
+        /// <returns></returns>
+        public Course[] ListAll()
+        {
+            connection.Open();
+            List<Course> courses = new List<Course>();
+            var command = connection.CreateCommand();
+            command.CommandText = "SELECT * FROM Course";
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    courses.Add(Reader2Course(reader));
+                }
+            }
+            connection.Close();
+            return courses.ToArray();
+        }
     }
 }
