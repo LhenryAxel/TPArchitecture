@@ -33,7 +33,7 @@ namespace HMI
         {
             InitializeComponent();
             courseDao = new CourseDao("C:/Users/al425221/source/repos/TPArchitecture/BDD.db");
-            examDao = new ExamDao("C:/ Users / al425221 / source / repos / TPArchitecture / BDD.db");
+            examDao = new ExamDao("C:/Users/al425221/source/repos/TPArchitecture/BDD.db");
             notebook = new Notebook(courseDao, examDao);
         }
 

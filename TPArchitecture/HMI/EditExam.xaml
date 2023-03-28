@@ -25,7 +25,8 @@
         <Label Content="Teacher" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2"/>
         <Label Content="Score" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3"/>
         <Label Content="Coef" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3" Grid.Column="2"/>
-        <Button Grid.Column="1" Content="Close" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Grid.ColumnSpan="2" Click="OnClose"/>
+        <Button Grid.Column="2" Content="Close" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Click="OnClose"/>
+        <Button Grid.Column="1" Content="Ok" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Click="Ok"/>
         <TextBox x:Name="teacherName" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center" Grid.ColumnSpan="3"/>
         <TextBox x:Name="score" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center"/>
         <TextBox x:Name="coef" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center"/>

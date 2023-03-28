@@ -51,5 +51,21 @@ namespace HMI
                 this.Close();
             }
         }
+
+        /// <summary>
+        /// Bouton Ok
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        //private void Ok(object sender, RoutedEventArgs e)
+        //{
+        //    exam.Teacher = this.Tea.Text;
+        //    exam.Coef = this.Name.Text;
+        //    exam.DateExam = 
+        //    exam.Course =
+        //    exam.Score 
+        //    course.Weight = this.Weight.Text;
+        //    this.Close();
+        //}
     }
 }
