@@ -18,7 +18,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Button Content="Ok" HorizontalAlignment="Stretch" Margin="20" Grid.Row="3" VerticalAlignment="Stretch" FontSize="20" Click="Ok"/>
-        <Button Grid.Column="1" Content="Cancel" HorizontalAlignment="Stretch" Margin="20" Grid.Row="3" VerticalAlignment="Stretch" FontSize="20"/>
+        <Button Grid.Column="1" Content="Cancel" HorizontalAlignment="Stretch" Margin="20" Grid.Row="3" VerticalAlignment="Stretch" FontSize="20" Click="Close"/>
         <TextBox x:Name="Code" Grid.Column="1" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center" Text="{Binding Code}"/>
         <TextBox x:Name="Name" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center" Text="{Binding Name}"/>
         <TextBox x:Name="Weight" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center" Text="{Binding Weight}"/>

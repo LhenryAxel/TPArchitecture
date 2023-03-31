@@ -31,7 +31,6 @@ namespace HMI
             InitializeComponent();
             this.course = course;
             this.DataContext = course;
-            course.Update();
         }
 
         /// <summary>
@@ -42,7 +41,6 @@ namespace HMI
         private void Close(object sender, RoutedEventArgs e)
         {
             this.Close();
-            course.Update();
         }
 
         /// <summary>

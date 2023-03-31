@@ -68,10 +68,10 @@ namespace HMI
         private void Add(object sender, RoutedEventArgs e)
         {
             Course course = new Course(new CourseDao("C:/Users/al425221/source/repos/TPArchitecture/BDD.db"), false);
-            course = this.notebook.AddCourse(course);
             EditCourse courseScreen = new EditCourse(course);
             courseScreen.Show();
-            this.Close();
+            courseScreen.Closed += UpdateInfo;
+            //this.Close();
         }
 
 
