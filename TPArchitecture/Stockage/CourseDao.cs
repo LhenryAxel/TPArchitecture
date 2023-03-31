@@ -25,7 +25,7 @@ namespace Storage
         }
 
         /// <summary>
-        /// Reader
+        /// Reader de course
         /// </summary>
         /// <param name="reader"></param>
         /// <returns></returns>
@@ -60,7 +60,7 @@ namespace Storage
         }
 
         /// <summary>
-        /// Méthode create
+        /// Méthode create qui créer une course dans la bdd 
         /// </summary>
         /// <param name="course"></param>
         public void Create(Course course)
@@ -86,7 +86,7 @@ namespace Storage
         }
 
         /// <summary>
-        /// Méthode update 
+        /// Méthode update qui met a jour la table
         /// </summary>
         /// <param name="t"></param>
         public void Update(Course t)
@@ -99,7 +99,7 @@ namespace Storage
         }
 
         /// <summary>
-        /// Méthode Suprimme qui supprime un cour
+        /// Méthode Suprimme qui supprime un cour de la bdd
         /// </summary>
         /// <param name="t"></param>
         public void Delete(Course t)

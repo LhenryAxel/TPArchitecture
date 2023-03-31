@@ -1,5 +1,8 @@
 ﻿namespace Logic
 {
+    /// <summary>
+    /// Interface IExamDao
+    /// </summary>
     public interface IExamDao
     {
         /// <summary>

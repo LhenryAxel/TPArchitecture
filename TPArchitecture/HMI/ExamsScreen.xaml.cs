@@ -34,7 +34,7 @@ namespace HMI
         }
         
         /// <summary>
-        /// DrawExams
+        /// Affiche les examens présent dans la bdd
         /// </summary>
         private void DrawExams()
         {

@@ -50,7 +50,7 @@ namespace HMI
         }
 
         /// <summary>
-        /// ouvre le ExamsScreen
+        /// ouvre la fenetre ExamsScreen
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -62,7 +62,7 @@ namespace HMI
         }
 
         /// <summary>
-        /// Permet d'appeler la méthode Calculate de notebook
+        /// Permet d'appeler la méthode Calculate
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

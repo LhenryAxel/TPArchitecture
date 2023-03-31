@@ -23,6 +23,10 @@ namespace HMI
         public Exam exam;
         private Notebook notebook;
 
+        /// <summary>
+        /// Constructeur de la classe EditExam qui récupere les exams déja présent
+        /// </summary>
+        /// <param name="notebook"></param>
         public EditExam(Notebook notebook)
         {
             InitializeComponent();
@@ -45,7 +49,7 @@ namespace HMI
         }
 
         /// <summary>
-        /// Bouton Ok
+        /// Bouton Ok qui recupere les données depuis l'ihm et les met dans exam, ensuite appelle de create exam
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

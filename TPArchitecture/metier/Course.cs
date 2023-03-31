@@ -19,7 +19,7 @@ namespace Logic
 
 
         /// <summary>
-        /// nom matiere
+        /// nom de la matiere
         /// </summary>
         public string Name   // property
         {
@@ -38,7 +38,7 @@ namespace Logic
         }
 
         /// <summary>
-        /// code matiere
+        /// code de la matiere
         /// </summary>
         public string Code   // property
         {
@@ -96,7 +96,7 @@ namespace Logic
         }
 
         /// <summary>
-        /// Si existe deja alors on appelle update, sinon on la créée
+        /// Si existe deja alors on appelle update, sinon on appelle create
         /// </summary>
         public void Update()
         {
@@ -111,7 +111,7 @@ namespace Logic
         }
 
         // <summary>
-        // Calcul de la moyenne
+        // Calcul de la moyenne des exams
         // </summary>
         // <param name = "exams" ></ param >
         // < returns ></ returns >

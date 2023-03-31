@@ -32,7 +32,7 @@ namespace Logic
 		private string teacher;
 
 		/// <summary>
-		/// avoir le prof
+		/// avoir le professeur 
 		/// </summary>
 		public string Teacher
 		{

@@ -21,7 +21,7 @@ namespace Storage
         }
 
         /// <summary>
-        /// cree les exams
+        /// cree les exams dans la bdd
         /// </summary>
         /// <param name="exam"></param>
         public void Create(Exam exam)
@@ -56,7 +56,7 @@ namespace Storage
         }
 
         /// <summary>
-        /// Méthode update 
+        /// Méthode update qui met a jour la table exam
         /// </summary>
         /// <param name="t"></param>
         public void Update(Exam t)
